@@ -1,0 +1,107 @@
+:root {
+  --bg: #faf7f2;
+  --bg-alt: #f2ede4;
+  --surface: #ffffff;
+  --ink: #2a2825;
+  --ink-soft: #5d5850;
+  --ink-mute: #8a8378;
+  --line: #e4ddd1;
+  --accent: #3e5a4a;
+  --accent-ink: #ffffff;
+  --accent-soft: #e3ebe5;
+  --wall: #c9b79c;
+  --floor: #a8794f;
+  --radius: 14px;
+  --shadow: 0 1px 2px rgb(42 40 37 / 6%), 0 8px 24px rgb(42 40 37 / 8%);
+  --header-h: 64px;
+  --font-display: 'Gowun Batang', 'Nanum Myeongjo', 'AppleMyungjo', serif;
+
+  font-family:
+    'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Malgun Gothic',
+    sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--ink);
+  background: var(--bg);
+  word-break: keep-all;
+  -webkit-font-smoothing: antialiased;
+  color-scheme: light;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-h);
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+/* 제목·강조용 글씨체 (고운바탕). 본문은 가독성을 위해 Pretendard 유지 */
+h1,
+h2,
+h3,
+.brand,
+.stats dd,
+.signature,
+.principle-num,
+.step-num {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+  }
+}
