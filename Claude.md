@@ -104,19 +104,22 @@ powershell -ExecutionPolicy Bypass -File scripts\resize-photos.ps1
 
 ## 8. GitHub Pages 배포
 
+- 저장소: https://github.com/leetaewon123/wallpaper
+- 사이트: https://leetaewon123.github.io/wallpaper/
+
 처음 한 번:
 
-1. GitHub에서 새 저장소 생성 (예: `wallpaper-landing`). 무료 계정은 **Public**이어야 Pages 사용 가능. README 등은 추가하지 않는다.
+1. GitHub에서 새 저장소 생성 (`wallpaper`). 무료 계정은 **Public**이어야 Pages 사용 가능. README 등은 추가하지 않는다.
 2. 이 폴더에서:
    ```bash
    git init -b main
    git add .
    git commit -m "포트폴리오 사이트 첫 배포"
-   git remote add origin https://github.com/<아이디>/wallpaper-landing.git
+   git remote add origin https://github.com/leetaewon123/wallpaper.git
    git push -u origin main
    ```
 3. 저장소 **Settings → Pages → Build and deployment → Source**를 **GitHub Actions**로 선택.
-4. **Actions** 탭에서 "Deploy to GitHub Pages"가 초록색으로 끝나면 `https://<아이디>.github.io/wallpaper-landing/` 에서 확인.
+4. **Actions** 탭에서 "Deploy to GitHub Pages"가 초록색으로 끝나면 `https://leetaewon123.github.io/wallpaper/` 에서 확인.
    - 3번 전에 push했다면 Actions 탭에서 실패한 실행을 **Re-run** 하면 된다.
 
 이후 수정할 때는 `git add . && git commit -m "내용" && git push` 만 하면 1~2분 뒤 자동 반영.
